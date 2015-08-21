@@ -1,28 +1,13 @@
 == README
+To participate in the Alpha test. Make sure you have the following:
+* The heroku ruby gem installed ()
+* A Heroku Account (free is fine)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+==Here's how to get setup:
+```shell
+> git clone https://github.com/cdanzig/ct-heroku-test.git
+> heroku create
+> heroku addons:create cameratag
+> echo "CAMERATAG_APPLICATION_UUID='`heroku config:get CAMERATAG_APPLICATION_UUID`'" > config/initializers/cameratag.rb
+> heroku push master
+```
