@@ -10,7 +10,7 @@ To participate in the Alpha test. Make sure you have the following:
 > heroku create
 > heroku addons:create cameratag
 > echo "CAMERATAG_APPLICATION_UUID='`heroku config:get CAMERATAG_APPLICATION_UUID`'" > config/initializers/cameratag.rb
-> git commit -a -m "I just created a CameraTag account!"
+> git commit -a -m "I just created a CameraTag account"
 > git push heroku master
 > heroku run rake db:migrate
 > heroku open
