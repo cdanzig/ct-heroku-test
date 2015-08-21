@@ -6,6 +6,12 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <script src='//cameratag.com/api/v5/js/cameratag.js' type='text/javascript'></script>
+  <script>
+    $(function(){
+      alert("hi");
+      CameraTag.setup()  
+    });
+  </script>
 </head>
 <body>
 
