@@ -16,8 +16,10 @@
   <camera id="myCamera" data-app-id="<%= CAMERATAG_APPLICATION_UUID %>"></camera>
   
   <script>
-    CameraTag.observe("myCamera", "published", function(){
-      $("#new_video").submit();
+    $(function(){
+      CameraTag.observe("myCamera", "published", function(){
+        $("#new_video").submit();
+      })
     })
   </script>
 <% end %>
