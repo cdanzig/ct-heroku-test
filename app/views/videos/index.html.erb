@@ -14,5 +14,5 @@
 
 <script>
 $("img")
-  .on('error', function() { console.log( $(this).attr("src", "/assets/processing.jpg") ) });
+  .on('error', function() { console.log( $(this).attr("src", "<%= asset_url('processing.jpg') %>") ) });
 </script>
