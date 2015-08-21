@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Back', videos_path %>
+
+<video id="myVideo" data-uuid="<%= @video.ct_id %>"></video>
+
+
+<p>
+  <strong>Ct:</strong>
+  <%= @video.ct_id %>
+</p>
+
+<p>
+  <strong>Thumbnail url:</strong>
+  <%= @video.thumbnail_url %>
+</p>
+
+<p>
+  <strong>Mp4 url:</strong>
+  <%= @video.mp4_url %>
+</p>
+
+<%= link_to 'Edit', edit_video_path(@video) %> |
+<%= link_to 'Destroy', @video, method: :delete, data: { confirm: 'Are you sure?' } %>

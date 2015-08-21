@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Videos</h1>
+
+<hr>
+<%= link_to 'New Video', new_video_path %>
+<hr>
+
+<% @videos.each do |video| %>
+  <a href="<%= video_url(video) %>">
+    <img src="<%= video.thumbnail_url %>"></img>
+  </a>
+<% end %>
+
+<script>
+$("img")
+  .on('error', function() { console.log( $(this).attr("src", "/assets/processing.jpg") ) });
+</script>

@@ -1,0 +1,26 @@
+<h1>New Video</h1>
+
+<%= form_for(@video) do |f| %>
+  <% if @video.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@video.errors.count, "error") %> prohibited this video from being saved:</h2>
+
+      <ul>
+      <% @video.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <camera id="myCamera" data-app-id="<%= CAMERATAG_APPLICATION_UUID %>"></camera>
+  
+  <script>
+    CameraTag.observe("myCamera", "published", function(){
+      $("#new_video").submit();
+    })
+  </script>
+<% end %>
+
+
+<%= link_to 'Back', videos_path %>
